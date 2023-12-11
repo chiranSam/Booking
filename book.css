@@ -904,10 +904,10 @@ header a::after{
     
     }
     .popupContainer{
-        visibility: hidden;
+        display: none;
     }
     .addedToFav{
-        visibility: hidden;
+        display: none;
     }
 }
 
