@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./book.css" type="text/css">
+    <title>BOOK NOW</title>
+</head>
+<body >
+    <header>
+        <section class="header">
+              <ul class="main-ul">
+                  <li class="logo"><a href="index.html"><img src="./logo-nav-removebg-preview.jpg" alt=""><span>--- Royal Regency ---</span></a></li>
+                  <li class="home"><a href="./index.html">HOME</a></li>
+                  <li class="branches"><a href="./branches.html">BRANCHES</a>
+                  <li class="ad"><a href="./adventures.html">ADVENTURES</a></li>
+                  <li class="rest"><a href="./restuarant.html">RESTUARANTS</a></li>
+                    <li class="btn"><a href="./booknow.html">BOOK NOW</a></li>
+              </ul>
+              <img src="./menu-btn.png" alt="" class="menu-btn">
+        </section>
+    </header> 
+    <article class="main-sec">
+        <section class="booking-form">
+            <section class="form-heading">
+                <h1>Reserve Your Luxury Escape Today</h1>
+                <p>Set your steps to close paradise</p>
+            </section>
+
+
+<!-- Room Booking form -->
+            <section class="form-top"> 
+                <form action="index.php" method="get" id="room_booking form">
+        <!-- Form inputs -->
+                    <section class="item-form">
+                        <span>Check-In Date</span>
+                        <input type="date" name="date" id="CheckInDate"   required>
+
+                    </section>
+                    <section class="item-form">
+                        <span>Check-out Date</span>
+                        <input type="date" name="date" id="CheckOutDate" required>
+
+                    </section>
+
+                    <!-- Selection of Nationality -->
+                    <section class="item-form">
+
+                            <span>Nationality</span>
+                            <select  id="nationality" required>
+                                <option>select one</option>
+                                <option  value="local">Local</option>
+                                <option  value="foreign">Foreign</option>
+                            </select>
+
+                    </section>    
+
+                    <section class="item-form">
+
+                        <span >No. of Adults</span>
+                        <input type="number" name="num_ad" id="num_ad" min="1" value="1" max="20" required>
+
+
+                    </section>
+                    <section class="item-form">
+
+                            <span>No. of Kids above 5yrs</span>
+                            <input type="number" name="num_kids" id="num_kids" min="0" value="0" >
+                    
+                    </section>
+                    <section class="item-form">
+
+                        <span>No. of Extra Beds</span>
+                        <input type="number" name="beds" id="beds" min="0" value="0" max="20">
+
+                    </section>
+                    <section class="item-form">
+                        <span>No. of Single Rooms</span>
+                        <input type="number" name="single" id="single" class="input-number" min="0" value="0" max="5">
+
+
+                    
+                    </section>
+
+                    <section class="item-form">
+
+                        <span>No. of Double Rooms</span>
+                        <input type="number" name="double" id="double"  class="input-number" min="0" value="0" max="5">
+
+                    </section>
+
+                    <section class="item-form">
+
+                        <span>No. of Triple Rooms</span>
+                        <input type="number" name="triple" id="triple"  class="input-number" min="0" value="0" max="5">
+
+                    </section>
+                    <section class="item-form">
+
+                        <span>Total Number of rooms</span>
+                        <input type="text" name="num_rooms" id="num_rooms" readonly>
+
+                    </section>
+
+
+                    <section class="item-form">
+                        <span>Name</span>
+                        <input type="text" name="name" id="name"  placeholder=" your name here..." required>
+                    </section>
+                    <section class="item-form">
+                        <span>e-mail</span>
+                        <input type="email" name="email" id="email" placeholder=" your email here..." required> 
+                    </section>
+
+                    <section class="item-form">
+                        <span>Promo code</span>
+                        <input type="number" name="promocode" id="promocode" placeholder="123">
+                    </section>
+
+                    <!-- Extra Requirements checkboxes -->
+                    <section class="checkbox_main">
+                        <span>Extra Requirements</span>
+                        <section id="checkbox">
+                            <label for="Wi-Fi">Wi-Fi</label>
+                            <input type="checkbox" id="Wi-Fi" name="ex_req" value="Wi-Fi">
+                        </section>
+
+                        <section id="checkbox">
+                            <label for="Wi-Fi">Pool View</label>
+                            <input type="checkbox" id="Pool_View" name="ex_req" value="Pool_View">
+                        </section> 
+
+                        <section id="checkbox">
+                            <label for="Wi-Fi">Garden View</label>
+                            <input type="checkbox" id="Garden_View" name="ex_req" value="Garden_View">
+                        </section>           
+                    </section> 
+                <!-- current booking diplay section -->
+                <section id="output-field" >
+                    <section class="currentBookingHeader" id="currentBookingHeader"><h1>Current Booking</h1></section>
+                        <fieldset id="fieldset-1" >
+                            <p id="output-1"></p>
+                        </fieldset>
+
+                </section>
+
+                <!-- Book Now button  -->
+                    <section id="submit">
+                        <input type="button" value="Book Now" id="bookNow" >
+                    </section>
+
+
+                </form>
+            </section>
+        </section>
+    </article>
+
+                
+
+
+
+
+
+
+
+    <article class="main-sec">
+        <section class="booking-form">
+            <section class="form-heading">
+                <h1>Adventure Awaits: Reserve Your Diving Adventure</h1>
+                <p>Experience Unforgettable Adventure</p>
+            </section>
+          <!-- Adventure booking form   -->
+            <section class="form-top"> 
+                <form action="index.php" method="get" id="form_ad">
+                    <section class="item-form">
+                    
+                        <span>Nationality</span>
+                        <select name="nationalityAd" id="nationalityAd" required >
+                            <option value="">select one</option>
+                            <option value="Local">Local</option>
+                            <option value="Foreign">Foreign</option>
+                        </select>
+
+                    </section> 
+                    <section class="item-form">
+                    
+                    <span for="num">No. of Adults</span>
+                    <input type="number" name="num" id="num_ad_adventure" min="1" value="0" required>
+
+                    
+                </section>
+                <section class="item-form">
+                    
+                        <span for="num">No. of Kids </span>
+                        <input type="number" name="num" id="num_kids_adventure" value="0">
+                   
+                </section>   
+
+                    <section class="item-form">
+                        <span>Number of hours</span>
+                        <input type="number" name="time" id="time" placeholder=" Hours" min="1" value="1" required>
+                        
+                    </section>
+
+                    <section class="item-form">
+                        <span>Name</span>
+                        <input type="text" name="name" id="name_ad" placeholder="first name & last name" required >
+                    </section>
+                    <section class="item-form">
+                        <span>e-mail</span>
+                        <input type="email" name="email" id="email_ad" placeholder=" your email here..." required > 
+                        
+                        
+                    </section>
+                
+                    <section class="item-form">
+                        
+                        <span>Date</span>
+                        <input type="date" name="date" id="date" required >
+                        
+                    </section>
+                    <section class="item-form">
+                        <span>Your phone number</span>
+                        <input type="number" name="number" id="number" placeholder="+94-xxxxxxxx" required>
+                    </section>
+                    <section class="checkbox_main2">
+                        <span>Guide Requirements</span>
+                        <section id="checkbox2">
+                            <label for="for_adults">For Adults</label>
+                            <input type="checkbox" id="for_adults" name="for_adults">
+                        </section>
+
+                        <section id="checkbox2">
+                            <label for="for_kids">For Kids</label>
+                            <input type="checkbox" id="for_kids" name="for_kids" >
+                        </section>
+                    </section> 
+
+
+                    <section id="output_ad">
+                        <section class="currentBookingHeader" id="currentBookingHeader"><h1>Current Booking</h1></section>
+                        <fieldset id="fieldset-1">
+                            <p id="adventuresOutput"></p>
+                        </fieldset>
+                        
+                    </section>
+
+                    <section id="submit">
+                        <input type="button" value="Book Adventure" id="book_ad" >
+                    </section>
+                    <!-- Pop Up massage container -->
+                    <section class="popupContainer" id="popupContainer">
+                        <section id="thankYou">
+                            <h2>Thank You !</h2>
+                        </section>
+                        <section class="details_container">
+                            <p id="popUpDetails"></p>
+                        </section>
+                        
+                        <section class="summery_container">
+                            <p id="summery"></p>
+                        </section>
+                        
+                        <input type="button" value="OK" id="ok">
+                    </section>
+
+
+                </form>
+            </section>
+            <!-- overrall booking details after click Book Now button -->
+            <section id="output-field-2">
+                <section class="currentBookingHeader"><h1>Overall Booking</h1></section> <!-- css is same as currentBookingHeader -->
+                <!-- <section id="underline"></section>-->
+                <fieldset id="fieldset-2">
+                    <p id="output-2"></p>
+                </fieldset>
+                
+            </section>
+
+   
+            <!-- add to favourite button -->
+            <section id="favourite">
+                <input type="submit" value="Add to favourite" id="favourite">
+            </section>
+            <!-- added to favourite pop up massage -->
+            <section class="addedToFav" id="addedToFav">
+                <section id="headerFav">
+                    <h2>Your booking added to favourites !</h2>
+                </section>
+                <section class="fav_container">
+                    <p id="fav_container"></p>
+                </section>
+                
+                <input type="button" value="OK" id="okFav">
+            </section>
+
+
+            <!-- Loyalty poits button -->
+            <section id="loyalty">
+                <input type="submit" value="Loyalty Points" id="loyalty">
+            </section>
+
+            <!-- loyalty points pop up -->
+            <section class="loyaltypopupContainer" id="loyaltypopupContainer">
+                <section id="thankYou">
+                    <h2>Loyalty Points you earned</h2>
+                </section>
+                <section class="loyaltyDetails_container">
+                    <p id="loyaltyPointsDetails"></p>
+                </section>
+                
+                <input type="button" value="OK" id="ok">
+            </section>
+
+        </section>
+            
+    </article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <footer class="footer-distributed">
+
+        <section class="footer-left">
+            <h3>THE ROYAL<span>REGENCY</span></h3>
+
+            <p class="footer-links">
+                <a href="./index.html">Home</a>
+                |
+                <a href="./branches.html">Branches</a>
+                |
+                <a href="./adventures.html">Adventures</a>
+                |
+                <a href="#">Restuarants</a>
+
+                <a href="#">Contact Us</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>The Royal Regency IT Department</strong> All rights reserved</p>
+        </section>
+
+        <section class="footer-center">
+            <section>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Head office</span>
+                    Colombo</p>
+            </section>
+
+            <section>
+                <i class="fa fa-phone"></i>
+                <p>+94 74**9**258</p>
+            </section>
+            <section>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">theRoyalRegency@gmail.com</a></p>
+            </section>
+        </section>
+        <section class="footer-right">
+            <p class="footer-company-about">
+                <span>About the Hotel</span>
+                <strong>Royal Regency</strong> With an impressive portfolio consisting of some of the best resorts in Sri Lanka, we offer our guests accommodation options of impeccable standards. Browns Hotels & Resorts meld tropical elegance with fabled Sri Lankan hospitality to provide travellers with an irresistible mix of elegance and modern comforts clad in the quintessence of an enchanting tropical island.
+            </p>
+            <section class="footer-icons">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </section>
+        </section>
+    </footer>
+    <script src="./booking.js"></script>
+</body>
+</html>

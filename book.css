@@ -1,0 +1,1174 @@
+
+@import url(https://fonts.google.com/knowledge/using_type/using_web_fonts);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+.html{
+    text-align: center;
+}
+
+
+.header{
+    height: 54px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+.header a{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:white;
+    background-color:rgb(13, 79, 136);
+    height: 54px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+}
+.header a:hover{
+    background:#ffffff;;
+    color:rgb(13, 79, 136);
+    letter-spacing: 3px;
+}
+header a::after{
+    background-color: #ffffff!important;
+    color:rgb(13, 79, 136)!important; 
+
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+.header ul li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.header .menu-btn{
+    width: 0px;
+}
+.header ul li span{
+    font-size: 0px;
+}
+
+/*in the mobile srenn add menu button to drop down nav bar*/
+@media(max-width:983px){
+    .header img{
+        padding: 5px;
+        width: 50px;
+    }
+    .header .menu-btn{
+        position: absolute;
+        top: 5px;
+        right: 40px;
+        width: 45px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .main-ul {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        margin-top: -900px;
+        transition: 0.5s ease;
+        justify-content: center;
+    }
+
+    .mobile-menu{
+       margin-top:-26px;
+       border-bottom-left-radius: 10px ;
+       border-bottom-right-radius:10px;
+
+    }
+    .header ul li img{
+        width:0px;
+    }
+    .header ul li span{
+        font-size: 20px;
+        font-family: cursive;
+    }
+
+}
+
+
+
+
+
+.content{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(./hotel-background-5.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content .outer .name h1{
+    text-transform: uppercase;
+    color: rgb(239 255 0);
+    font-size: 75px;
+    font-family: initial;
+    letter-spacing: 3px;
+    text-shadow: 0 0 11px rgb(255 255 255), 0 0 20px #000000;
+    margin-bottom: 20px;
+    background:transparent;
+    position: relative;
+    animation: text 3s 1;
+
+}
+@media(max-width:991px){
+    .content .outer .name h1{
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+     .outer .name h2{
+        font-size:25px;
+    }
+
+
+}
+
+
+
+@keyframes text {
+    0%{
+        color: rgb(255, 255, 255);
+        margin-bottom: -85px;
+        margin-top: -40px;
+    }
+    85%{
+        letter-spacing: 10px;
+        margin-bottom: 0px;
+        margin-top:0px ;
+    }
+    20%{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    
+
+}
+
+
+
+.content .outer .name h3{
+    text-align: center;
+    font-size: xx-large;
+    font-family: initial;
+    color: #ffffff;
+    text-shadow: 0 0 11px rgb(0 0 0), 0 0 20px #030308;
+}
+
+
+
+
+.content .outer .name h4{
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+    letter-spacing: 10px;
+    padding-top: 10px
+}
+.content .outer .name h2{
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+    font-family: initial;
+    text-align: center;
+}
+.content .outer button a{
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(13, 79, 136);
+    color: white;
+    border: 2px solid rgb(255 255 255);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.content .outer .button{
+    padding-top: 40px;
+}
+.content .outer .button button {
+    border-width: 0px;
+
+}
+.content .outer .button button a:hover{
+    background-color:rgb(255, 255, 255) ;
+    color:  rgb(7 28 46) ;
+    letter-spacing: 3px;
+    border: 2px solid rgba(24,34,75,255);
+    
+
+}
+
+
+
+
+
+.header ul li img{
+    height: 54px;
+}
+.footer{
+    height: 100px;
+    width: 100%;
+}
+
+
+
+
+
+
+/* BOOK NOW page CSS */
+.main_section{
+    max-width: 1280px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.booking-form{
+    width: 650px;
+    display: contents;
+}
+.form-top form{
+    padding: 0 10% 0 13%;
+}
+
+.form-heading{
+    text-align: center;
+    margin: 0 0 40px 0;
+    padding-top: 10%;
+    background: linear-gradient(180deg, #77a5ff, transparent);
+}
+
+.form-heading h1{
+    font-family: sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.form-heading p{
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 30px;
+}
+
+.form-top .item-form{
+    margin: 10px 10px;
+    width: 300px;
+    display: inline-block;
+}
+.form-top .item-form input {
+    width: 100%;
+    font-family:  emoji;
+    background: none;
+    border: 2px solid rgb(13, 79, 136);
+    font-size: 18px;
+    outline: none;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.form-top .item-form select{
+    width: 100%;
+    font-family: emoji;
+    background: none;
+    border: 2px solid rgb(13, 79, 136);
+    font-size: 20px;
+    outline: none;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 3px
+}
+.form-top .item-form span{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.currentBookingHeader{
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 50px;
+    text-align: center;
+    
+}
+
+#underline{
+    width: 145px;
+    height: 5px;
+    background-color: rgb(13, 79, 136);
+    margin: -35px 0px 35px 0;
+    border-radius: 25px;
+    display: block;
+}
+
+#fieldset-1{
+    width: 35rem;
+    height: 100%;
+    padding: 7%;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    background: #d6deff5e;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 35px;
+    
+}
+
+
+/* out put tables css begin */
+
+#output-field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+#output_ad{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+#output-1 th:nth-child(even),td:nth-child(even) {
+    background-color:#6bc7c721;
+    width: 10em;
+  }
+
+  /* #99b1b121 */
+#output-1 table{
+    line-height: 33px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#extraReq{
+    text-align: center;
+    background-color:#99b1b140;
+    font-size: 15px;
+    border-radius: 15px;
+
+}
+
+#opt{
+    text-align: left; 
+}
+
+
+
+#result{
+    text-align: center;
+}
+#costInt{
+    text-align: center;
+    font-weight: 600;
+    background-color: #f6bd1de0;
+}
+
+
+
+
+#cost{
+    font-weight: 600;
+    background-color: #e9ce82;
+}
+
+#fieldset-2{
+    width: 35rem;
+    height: 100%;
+    padding: 7%;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    background: #d6deff70;
+    border: none;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+#output-field-2{
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+#output-2 table{
+    line-height: 33px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#output_ad table{
+    line-height: 33px;
+    font-size: 17px;
+    letter-spacing: 1px;
+
+} /* out put tables css end */
+
+/* output tables responsive */
+
+
+
+
+
+/* adventurure form book now button css */
+#submit{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 55px;
+    padding-right: 95px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    justify-content: center;
+}
+#submit input{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: rgb(13, 79, 136);
+    color: whitesmoke;
+    transition: 0.3s;
+    font-size: 17px;
+}
+#submit input:hover{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: #fff;
+    color: rgb(13, 79, 136) ;
+    letter-spacing: 4px;
+    border: 2px solid rgb(13, 79, 136) ;
+}
+#submit input:active{
+    font-size: 19px;
+    background-color: #ffff;
+    color: rgb(13, 79, 136);
+}
+
+
+/*total cost button*/
+#totalcost{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    justify-content: center;
+}
+#totalcost input{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: rgb(13, 79, 136);
+    color: whitesmoke;
+    transition: 0.3s;
+}
+#totalcost input:hover{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: #fff;
+    color: rgb(13, 79, 136) ;
+    letter-spacing: 4px;
+    border: 2px solid rgb(13, 79, 136) ;
+}
+#totalcost input:active{
+    font-size: 19px;
+    background-color: #ffff;
+    color: rgb(13, 79, 136);
+}
+/* Book Now btn CSS */
+
+#bookNow{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+
+#bookNow input{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: rgb(13, 79, 136);
+    color: whitesmoke;
+    transition: 0.3s;
+}
+#bookNow input:hover{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: #fff;
+    color: rgb(13, 79, 136) ;
+    letter-spacing: 4px;
+    border: 2px solid rgb(13, 79, 136) ;
+}
+#bookNow input:active{
+    font-size: 19px;
+    background-color: #ffff;
+    color: rgb(13, 79, 136);
+} 
+
+/*adventurwe booking button*/
+#book_ad{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    justify-content: center;
+}
+#book_ad{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: rgb(13, 79, 136);
+    color: whitesmoke;
+    transition: 0.3s;
+}
+#book_ad input:hover{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: #fff;
+    color: rgb(13, 79, 136) ;
+    letter-spacing: 4px;
+    border: 2px solid rgb(13, 79, 136) ;
+}
+#book_ad input:active{
+    font-size: 19px;
+    background-color: #ffff;
+    color: rgb(13, 79, 136);
+}
+
+/* pop up css */
+
+.popupContainer{
+    width: 400px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+}
+.open-popupContainer{
+    visibility: visible;
+    top:52%;
+    transform: translate(-50%,-50%)scale(1);
+
+}
+
+/* .overLay{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 999;
+} */
+
+/* pop up header css */
+
+.popupContainer h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: rgb(13, 79, 136);
+}
+
+/* ok button in the pop up massage */
+.popupContainer input{
+    width: 100%;
+    font-family: sans-serif;
+    margin-top: 50px;
+    padding: 10px 0;
+    background:rgb(10, 143, 45) ;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.popupContainer input:hover{
+    font-family: sans-serif;
+    width: 100%;
+    background-color: #fff;
+    color: rgb(10, 143, 45) ;
+    letter-spacing: 3px;
+    border: 2px solid rgb(10, 143, 45) ;
+
+}
+
+
+
+/* initial introducing paragrapg in the pop up massage */
+
+.details_container p{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+/* data from the form */
+.summery_container p{
+    text-align: left;
+    line-height: 20px;
+    padding-top: 10px;
+}
+
+/* add to favourite pop up massage */
+
+/* pop up header css */
+
+.addedToFav{
+    width: 400px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: visible;
+    transition: transform 0.4s,top 0.4s;
+}
+.open-FavpopupContainer{
+    visibility: visible;
+    top: 55%;
+    transform: translate(-50%,-50%)scale(1);
+    background: #f2c0c0;
+    border-radius: 40px;
+    border: none;
+
+}
+
+
+.addedToFav h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    font-family: fantasy;
+}
+
+/* ok button in the pop up massage */
+.addedToFav input{
+    width: 50%;
+    font-family: sans-serif;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: rgb(255 12 12);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+}
+.addedToFav input:hover{
+    font-family: sans-serif;
+    width: 52%;
+    background-color: #fff;
+    color: rgb(255 12 12);
+    letter-spacing: 3px;
+    border: 2px solid rgb(255 12 12);
+
+}
+
+
+
+/* initial introducing paragrapg in the pop up massage */
+
+.fav_container p{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+
+/* loyalty points pop up */
+
+.loyaltypopupContainer{
+    width: 400px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: visible;
+    transition: transform 0.4s,top 0.4s;
+}
+.open-loyaltypopupContainer{
+    visibility: visible;
+    top:52%;
+    transform: translate(-50%,-50%)scale(1);
+
+}
+
+
+
+.loyaltypopupContainer h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: rgb(13, 79, 136);
+}
+
+/* ok button in the pop up massage */
+.loyaltypopupContainer input{
+    width: 100%;
+    font-family: sans-serif;
+    margin-top: 50px;
+    padding: 10px 0;
+    background:rgb(10, 143, 45) ;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.loyaltypopupContainer input:hover{
+    font-family: sans-serif;
+    width: 100%;
+    background-color: #fff;
+    color: rgb(10, 143, 45) ;
+    letter-spacing: 3px;
+    border: 2px solid rgb(10, 143, 45) ;
+
+}
+
+
+
+/* initial introducing paragrapg in the pop up massage */
+
+.loyaltyDetails_container p{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+
+/*add to favourite button*/
+
+#favourite{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    justify-content: center;
+    background: linear-gradient(270deg, #3aff693b, transparent,#3aff693b);
+}
+
+#favourite input{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: rgb(10, 143, 45);
+    color: whitesmoke;
+    transition: 0.3s;
+}
+#favourite input:hover{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: #fff;
+    color: rgb(10, 143, 45) ;
+    letter-spacing: 3px;
+    border: 2px solid rgb(10, 143, 45) ;
+}
+#favourite input:active{
+    font-size: 15px;
+    background-color: #ffff;
+    color: rgb(10, 143, 45);
+}
+
+/*loyalty points button*/
+#loyalty{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    justify-content: center;
+    background: linear-gradient(270deg, #3aff693b, transparent,#3aff693b);
+}
+
+#loyalty input{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: rgb(10, 143, 45);
+    color: whitesmoke;
+    transition: 0.3s;
+}
+#loyalty input:hover{
+    font-family: sans-serif;
+    width: 200px;
+    background-color: #fff;
+    color: rgb(10, 143, 45) ;
+    letter-spacing: 3px;
+    border: 2px solid rgb(10, 143, 45) ;
+}
+#loyalty input:active{
+    font-size: 15px;
+    background-color: #ffff;
+    color: rgb(10, 143, 45);
+}
+
+
+@media(max-width:850px){
+
+    #fieldset-1{
+        width: 20em;
+        margin-right: 43px;
+    }
+
+    #fieldset-2{
+        width: 22rem;
+    }
+
+    #opt{
+        font-size: 12px;
+    }
+    #result{
+        font-size: 12px;
+    }
+    #result{
+        font-size: 12px;
+    }
+    #result{
+        font-size: 13px;
+    }
+    .open-popupContainer{
+        transform: translate(-50%,-50%)scale(0.5);
+    
+    }
+    .open-FavpopupContainer{
+        transform: translate(-50%,-50%)scale(0.5);
+    
+    }
+    .popupContainer{
+        visibility: hidden;
+    }
+    .addedToFav{
+        visibility: hidden;
+    }
+}
+
+
+/* check box css */
+.checkbox_main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.checkbox_main span{
+    font-family: monospace;
+    font-size: 23px;
+}
+#checkbox{
+    font-family: monospace;
+    font-size: 18px;
+}
+
+@media(max-width:835px){
+
+    .checkbox_main{
+        display: flex;
+        flex-direction: column;    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+}
+.checkbox_main2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.checkbox_main2 span{
+    font-family: monospace;
+    font-size: 23px;
+}
+#checkbox2{
+    font-family: monospace;
+    font-size: 18px;
+}
+
+
+@media(max-width:835px){
+
+    .checkbox_main2{
+        display: flex;
+        flex-direction: column;    
+    }
+}
+
+
+
+/*make form responsive*/
+
+@media screen and (max-width:710px){
+        .form-top{
+            text-align: center;
+        }
+        .form-top form{
+            margin-right: -10%;
+        }
+        .form-heading h1 {
+            padding-top: 10%;
+            font-size: 31px;
+        }
+        .form-heading p {
+            margin-right: -9%;
+            margin-bottom: 30px
+        }
+        .form-top form{
+            padding: 0;
+        }
+        .form-heading {
+            margin: 0;
+        }
+    }
+
+
+/* The footer is fixed to the bottom of the page */
+
+footer {
+    bottom: 0;
+}
+
+
+.footer-distributed {
+    background-color:  rgba(24,34,75,255);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.footer-distributed h3 span {
+    color: #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color:white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #e0ac1c;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #3F71EA;
+}
+
+.footer-links a:hover {
+    color: #3F71EA;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       
+        
+
+
+
+
+
+
+
+
+
+
+
