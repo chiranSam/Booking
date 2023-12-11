@@ -385,5 +385,14 @@
         </section>
     </footer>
     <script src="./booking.js"></script>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const mainul = document.querySelector('.main-ul')
+
+
+        menuBtn.addEventListener('click',()=>{
+            mainul.classList.toggle('mobile-menu')
+        })
+    </script>
 </body>
 </html>
