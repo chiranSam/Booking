@@ -40,12 +40,12 @@
                 <form action="index.php" method="get" id="room_booking form">
         <!-- Form inputs -->
                     <section class="item-form">
-                        <span>Check-In Date</span>
+                        <label for="date"><span>Check-In Date</span></label>
                         <input type="date" name="date" id="CheckInDate"   required>
 
                     </section>
                     <section class="item-form">
-                        <span>Check-out Date</span>
+                        <label for="date"><span>Check-out Date</span></label>
                         <input type="date" name="date" id="CheckOutDate" required>
 
                     </section>
@@ -64,25 +64,25 @@
 
                     <section class="item-form">
 
-                        <span >No. of Adults</span>
+                        <label for="num_ad"><span >No. of Adults</span></label>
                         <input type="number" name="num_ad" id="num_ad" min="1" value="1" max="20" required>
 
 
                     </section>
                     <section class="item-form">
 
-                            <span>No. of Kids above 5yrs</span>
+                            <label for="num_kids"><span>No. of Kids above 5yrs</span></label>
                             <input type="number" name="num_kids" id="num_kids" min="0" value="0" >
                     
                     </section>
                     <section class="item-form">
 
-                        <span>No. of Extra Beds</span>
+                        <label for="beds"><span>No. of Extra Beds</span></label>
                         <input type="number" name="beds" id="beds" min="0" value="0" max="20">
 
                     </section>
                     <section class="item-form">
-                        <span>No. of Single Rooms</span>
+                        <label for="single"><span>No. of Single Rooms</span></label>
                         <input type="number" name="single" id="single" class="input-number" min="0" value="0" max="5">
 
 
@@ -91,36 +91,36 @@
 
                     <section class="item-form">
 
-                        <span>No. of Double Rooms</span>
+                        <label for="double"><span>No. of Double Rooms</span></label>
                         <input type="number" name="double" id="double"  class="input-number" min="0" value="0" max="5">
 
                     </section>
 
                     <section class="item-form">
 
-                        <span>No. of Triple Rooms</span>
+                        <label for="triple"><span>No. of Triple Rooms</span></label>
                         <input type="number" name="triple" id="triple"  class="input-number" min="0" value="0" max="5">
 
                     </section>
                     <section class="item-form">
 
-                        <span>Total Number of rooms</span>
+                        <label for="num_rooms"><span>Total Number of rooms</span></label>
                         <input type="text" name="num_rooms" id="num_rooms" readonly>
 
                     </section>
 
 
                     <section class="item-form">
-                        <span>Name</span>
+                        <label for="name"><span>Name</span></label>
                         <input type="text" name="name" id="name"  placeholder=" your name here..." required>
                     </section>
                     <section class="item-form">
-                        <span>e-mail</span>
+                        <label for="email"><span>e-mail</span></label>
                         <input type="email" name="email" id="email" placeholder=" your email here..." required> 
                     </section>
 
                     <section class="item-form">
-                        <span>Promo code</span>
+                        <label for="promocode"><span>Promo code</span></label>
                         <input type="number" name="promocode" id="promocode" placeholder="123">
                     </section>
 
@@ -153,7 +153,7 @@
 
                 <!-- Book Now button  -->
                     <section id="submit">
-                        <input type="button" value="Book Now" id="bookNow" >
+                        <input type="button" value="Book Now" id="bookNow">
                     </section>
 
 
@@ -177,7 +177,7 @@
                 <p>Experience Unforgettable Adventure</p>
             </section>
           <!-- Adventure booking form   -->
-            <section class="form-top"> 
+            <section aria-label="" class="form-top"> 
                 <form action="index.php" method="get" id="form_ad">
                     <section class="item-form">
                     
@@ -198,19 +198,19 @@
                 </section>
                 <section class="item-form">
                     
-                        <span for="num">No. of Kids </span>
+                        <label for="num"><span for="num">No. of Kids </span></label>
                         <input type="number" name="num" id="num_kids_adventure" value="0">
                    
                 </section>   
 
                     <section class="item-form">
-                        <span>Number of hours</span>
+                        <label for="time"><span>Number of hours</span></label>
                         <input type="number" name="time" id="time" placeholder=" Hours" min="1" value="1" required>
                         
                     </section>
 
                     <section class="item-form">
-                        <span>Name</span>
+                        <label for="name"><span>Name</span></label>
                         <input type="text" name="name" id="name_ad" placeholder="first name & last name" required >
                     </section>
                     <section class="item-form">
@@ -222,12 +222,12 @@
                 
                     <section class="item-form">
                         
-                        <span>Date</span>
+                        <label for="date"><span>Date</span></label>
                         <input type="date" name="date" id="date" required >
                         
                     </section>
                     <section class="item-form">
-                        <span>Your phone number</span>
+                        <label for="number"><span>Your phone number</span></label>
                         <input type="number" name="number" id="number" placeholder="+94-xxxxxxxx" required>
                     </section>
                     <section class="checkbox_main2">
