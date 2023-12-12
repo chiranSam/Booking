@@ -34,8 +34,8 @@ const optNationality = document.getElementById("nationality");
 const checkWiFi = document.getElementById("Wi-Fi");
 const checkPoolView = document.getElementById("Pool_View");
 const checkGardenView = document.getElementById("Garden_View");
-const checkInDate = document.getElementById("CheckInDate");
-const checkOutDate = document.getElementById("CheckOutDate");
+const checkInDate =new Date(document.getElementById("CheckInDate").value) ;
+const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
 //total number of rooms displaying input
 const totalNumRooms = document.getElementById("num_rooms");
 
@@ -93,12 +93,18 @@ function init(){
 
 // room booking real time uptaing table with calculations
 function updateOutput(){
+
+        const checkInDate =new Date(document.getElementById("CheckInDate").value) ;
+        const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
+            
+            var days = (checkOutDate-checkInDate)/(1000*60*60*24);
+            var nights = Math.ceil(days);
         
         totalCost = (singleroomCost*numSingle.value) + 
                     (tripleroomCost*numTriple.value) +
                     (doubleroomCost*numDouble.value)+
                     (extrabedsCost*extraBeds.value) + 
-                    (kidsCost*numKids.value);
+                    (kidsCost*numKids.value)*nights;
 
         if(promoCode.value === '123'){
             totalCost *= 0.95; 
@@ -209,8 +215,17 @@ function diplayOverallbooking(event){
         event.preventDefault();
         console.log("overall booking cost");
 
-        totalCost = (singleroomCost*numSingle.value) + (tripleroomCost*numTriple.value) +(doubleroomCost*numDouble.value)+
-                        (extrabedsCost*extraBeds.value) + (kidsCost*numKids.value);
+        const checkInDate =new Date(document.getElementById("CheckInDate").value) ;
+        const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
+            
+            var days = (checkOutDate-checkInDate)/(1000*60*60*24);
+            var nights = Math.ceil(days);
+        
+        totalCost = (singleroomCost*numSingle.value) + 
+                    (tripleroomCost*numTriple.value) +
+                    (doubleroomCost*numDouble.value)+
+                    (extrabedsCost*extraBeds.value) + 
+                    (kidsCost*numKids.value)*nights;
 
         if(promoCode.value === '123'){
             totalCost *= 0.95; 
