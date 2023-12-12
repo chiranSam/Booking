@@ -118,11 +118,11 @@ function updateOutput(){
                                                     </tr>
                                                     <tr>
                                                         <td id="opt">> Check In Date</td>
-                                                        <td id="result">${checkInDate.value}</td>
+                                                        <td id="result">${checkInDate}</td>
                                                     </tr>
                                                     <tr>
                                                         <td id="opt">> Check Out Date</td>
-                                                        <td id="result">${checkOutDate.value}</td>
+                                                        <td id="result">${checkOutDate}</td>
                                                     </tr>
                                                     <tr>    
                                                         <td id="opt">> No. of Adults</td>
@@ -277,11 +277,11 @@ function diplayOverallbooking(event){
                                             </tr>
                                             <tr>
                                                 <td id="opt">> Check In Date</td>
-                                                <td id="result">${checkInDate.value}</td>
+                                                <td id="result">${checkInDate}</td>
                                             </tr>
                                             <tr>
                                                 <td id="opt">> Check Out Date</td>
-                                                <td id="result">${checkOutDate.value}</td>
+                                                <td id="result">${checkOutDate}</td>
                                             </tr>
                                             <tr>    
                                                 <td id="opt">> Nationality</td>
