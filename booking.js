@@ -9,6 +9,7 @@ const extrabedsCost = 8000;
 const kidsCost = 5000;
 const loyalty_pointsPerRoom = 20;
 let totalCost;
+let nights;
 
 // let totalCost = (singleroomCost*numSingle.value) + (tripleroomCost*numTriple.value) +(doubleroomCost*numDouble.value)+
 //                         (extrabedsCost*extraBeds.value) + (kidsCost*numKids.value);
@@ -38,6 +39,8 @@ const checkInDate =new Date(document.getElementById("CheckInDate").value) ;
 const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
 //total number of rooms displaying input
 const totalNumRooms = document.getElementById("num_rooms");
+//total number of nights display input
+const nightsDisplayInput = document.getElementById("nights");
 
 
 
@@ -64,6 +67,15 @@ btnbookNow.addEventListener("click",diplayOverallbooking);
 // btnloyalty.addEventListener("click",calculayeLoyaltyPoints);
 
 
+function getdate(date){
+    nextDay = new Date(date);
+    nextDay.setDate(date.getdate()+1);
+    return nextDay.toISOString().split('T')[0];
+}
+
+
+
+
 // event listner for total rooms input
 var roomNumberInput = document.querySelectorAll('.input-number');
     roomNumberInput.forEach(function(input){
@@ -71,6 +83,7 @@ var roomNumberInput = document.querySelectorAll('.input-number');
 })
 //function for total room calculation input
 function calTotalRooms() {
+    console.log('Calculate rooms');
 
     var numSingle =parseInt(document.getElementById("single").value) ||0 ;
     var numDouble = parseInt(document.getElementById("double").value) ||0;
@@ -84,6 +97,37 @@ function calTotalRooms() {
    
 }
 
+
+//night calculating 
+
+var enteredDates = document.querySelectorAll('.date-input');
+    enteredDates.forEach(function(inputDates){
+        inputDates.addEventListener('input',calNumNights);
+    })
+
+function calNumNights(){
+
+        
+        console.log('Calculate nights');
+        const checkInDate =new Date(document.getElementById("CheckInDate").value);
+        const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
+        
+        var days = (checkOutDate-checkInDate)/(1000*60*60*24);
+        var nights = Math.ceil(days);
+
+   
+        nightsDisplayInput.value= nights;
+        
+        
+    
+
+    
+
+    }
+
+
+
+
 //Function for init
 
 function init(){
@@ -93,20 +137,23 @@ function init(){
 
 // room booking real time uptaing table with calculations
 function updateOutput(){
-
-        const checkInDate =new Date(document.getElementById("CheckInDate").value) ;
-        const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
-            
-            var days = (checkOutDate-checkInDate)/(1000*60*60*24);
-            var nights = Math.ceil(days);
+    const checkInDate =new Date(document.getElementById("CheckInDate").value) ;
+    const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
+    
+    const onlyCheckInDate = checkInDate.toLocaleDateString();
+    const onlyCheckOutDate = checkOutDate.toLocaleDateString();
         
-        totalCost = (singleroomCost*numSingle.value) + 
+        var days = (checkOutDate-checkInDate)/(1000*60*60*24);
+        var nights = Math.ceil(days);
+        
+        totalCost = ((singleroomCost*numSingle.value) + 
                     (tripleroomCost*numTriple.value) +
                     (doubleroomCost*numDouble.value)+
                     (extrabedsCost*extraBeds.value) + 
-                    (kidsCost*numKids.value)*nights;
+                    (kidsCost*numKids.value))*nights;
 
         if(promoCode.value === '123'){
+            console.log('promo code accepted');
             totalCost *= 0.95; 
         }
              // Real time updating output with total cost calculation (table fomat)
@@ -118,11 +165,11 @@ function updateOutput(){
                                                     </tr>
                                                     <tr>
                                                         <td id="opt">> Check In Date</td>
-                                                        <td id="result">${checkInDate}</td>
+                                                        <td id="result">${onlyCheckInDate}</td>
                                                     </tr>
                                                     <tr>
                                                         <td id="opt">> Check Out Date</td>
-                                                        <td id="result">${checkOutDate}</td>
+                                                        <td id="result">${onlyCheckOutDate}</td>
                                                     </tr>
                                                     <tr>    
                                                         <td id="opt">> No. of Adults</td>
@@ -217,15 +264,15 @@ function diplayOverallbooking(event){
 
         const checkInDate =new Date(document.getElementById("CheckInDate").value) ;
         const checkOutDate =new Date( document.getElementById("CheckOutDate").value);
+
+        let onlyCheckInDate = checkInDate.toLocaleDateString();
+        let onlyCheckOutDate = checkOutDate.toLocaleDateString();
             
             var days = (checkOutDate-checkInDate)/(1000*60*60*24);
             var nights = Math.ceil(days);
-        
-        totalCost = (singleroomCost*numSingle.value) + 
-                    (tripleroomCost*numTriple.value) +
-                    (doubleroomCost*numDouble.value)+
-                    (extrabedsCost*extraBeds.value) + 
-                    (kidsCost*numKids.value)*nights;
+
+        totalCost = ((singleroomCost*numSingle.value) + (tripleroomCost*numTriple.value) +(doubleroomCost*numDouble.value)+
+                        (extrabedsCost*extraBeds.value) + (kidsCost*numKids.value))*nights;
 
         if(promoCode.value === '123'){
             totalCost *= 0.95; 
@@ -277,11 +324,11 @@ function diplayOverallbooking(event){
                                             </tr>
                                             <tr>
                                                 <td id="opt">> Check In Date</td>
-                                                <td id="result">${checkInDate}</td>
+                                                <td id="result">${onlyCheckInDate}</td>
                                             </tr>
                                             <tr>
                                                 <td id="opt">> Check Out Date</td>
-                                                <td id="result">${checkOutDate}</td>
+                                                <td id="result">${onlyCheckOutDate}</td>
                                             </tr>
                                             <tr>    
                                                 <td id="opt">> Nationality</td>

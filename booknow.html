@@ -41,12 +41,17 @@
         <!-- Form inputs -->
                     <section class="item-form">
                         <label for="date"><span>Check-In Date</span></label>
-                        <input type="date" name="date" id="CheckInDate"   required>
+                        <input type="date" name="date" id="CheckInDate" class="date-input"   required>
 
                     </section>
                     <section class="item-form">
                         <label for="date"><span>Check-out Date</span></label>
-                        <input type="date" name="date" id="CheckOutDate" required>
+                        <input type="date" name="date" id="CheckOutDate" class="date-input" required>
+
+                    </section>
+                    <section class="item-form">
+                        <label for="nights"><span>No. of nights</span></label>
+                        <input type="text" name="nights" id="nights" min="0" readonly>
 
                     </section>
 
@@ -305,18 +310,6 @@
             <!-- Loyalty poits button -->
             <section id="loyalty">
                 <input type="submit" value="Loyalty Points" id="loyalty">
-            </section>
-
-            <!-- loyalty points pop up -->
-            <section class="loyaltypopupContainer" id="loyaltypopupContainer">
-                <section id="thankYou">
-                    <h2>Loyalty Points you earned</h2>
-                </section>
-                <section class="loyaltyDetails_container">
-                    <p id="loyaltyPointsDetails"></p>
-                </section>
-                
-                <input type="button" value="OK" id="ok">
             </section>
 
         </section>

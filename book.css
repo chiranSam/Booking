@@ -1,4 +1,5 @@
 
+@import url(https://fonts.google.com/knowledge/using_type/using_web_fonts);
 *{
     margin: 0;
     padding: 0;
@@ -601,16 +602,6 @@ header a::after{
 
 }
 
-/* .overLay{
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(0, 0, 0, 0.5);
-    z-index: 999;
-} */
-
 /* pop up header css */
 
 .popupContainer h2{
@@ -732,7 +723,7 @@ header a::after{
 }
 
 
-/* loyalty points pop up */
+/* loyalty points pop up
 
 .loyaltypopupContainer{
     width: 400px;
@@ -766,7 +757,7 @@ header a::after{
 }
 
 /* ok button in the pop up massage */
-.loyaltypopupContainer input{
+/* .loyaltypopupContainer input{
     width: 100%;
     font-family: sans-serif;
     margin-top: 50px;
@@ -793,10 +784,10 @@ header a::after{
 
 /* initial introducing paragrapg in the pop up massage */
 
-.loyaltyDetails_container p{
+/* .loyaltyDetails_container p{
     font-weight: 600;
     font-family: sans-serif;
-}
+} */ 
 
 
 /*add to favourite button*/
@@ -905,9 +896,17 @@ header a::after{
     .popupContainer{
         display: none;
     }
+    .open-popupContainer{
+        display: block;
+    }
     .addedToFav{
         display: none;
     }
+    .open-FavpopupContainer{
+        display: block;
+    }
+
+
 }
 
 
@@ -1026,7 +1025,7 @@ footer {
     color: #ffffff;
     font: normal 36px 'Cookie', cursive;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
 }
 
 
